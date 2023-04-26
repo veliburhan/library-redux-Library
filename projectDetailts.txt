@@ -1,0 +1,20 @@
+Tanım:
+    Bu uygulama kitaplığımızın dijital ortama aktarılmasını sağlar.
+
+Dependencies - ( Bağımlılıklar )
+    -axios  ( npm install axios)
+    -react router dom (npm install react-router-dom@6)
+    -redux (npm install redux) , react-redux  (npm install react-redux)
+    -json-server (npm install json-server)
+
+İş Sırası:
+    => Json-server yapısını kur. ( foreign key oluştur)
+    => Redux yapısının kurulması.
+        > Store eklenecek stateler
+            1. Books
+            2. Categories
+        > React uygulamasını store ile provide et.
+    => Router yapısını kur.
+    => UI/UX (user interface / user experiense) Kütüphanesi => Bootstrap
+    => Redux içerisindeki Storu doldur.
+    => Kitapları listele. ( ayrı bir component ile)

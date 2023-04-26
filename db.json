@@ -1,0 +1,46 @@
+{"books":[
+    {
+        "id":"1",
+        "title":"Hayvan Çiftliği",
+        "author":"George Orwell",        
+        "isbn":"11112222333344445555",
+        "publiser":"Özgür Yayınları",
+        "categoryId":"1",
+        "isRead":"false"
+    },
+    {
+        "id":"2",
+        "title":"Şeker Portakalı",
+        "author":"Jose Mauro de Vasconcelos",        
+        "isbn":"22223333444455556666",
+        "publiser":"Can Yayınları",
+        "categoryId":"2",
+        "isRead":"false"
+    },
+    {
+        "id":"3",
+        "title":"Dedemin Bakkalı",
+        "author":"Şermin Yaşar",        
+        "isbn":"133334444555566667777",
+        "publiser":"Timaş Yayınları",
+        "categoryId":"3",
+        "isRead":"false"
+    }
+],
+
+"categories":[
+    {
+        "id":"1",
+        "name":"Roman"
+    },
+    {
+        "id":"2",
+        "name":"Hikaye"
+    },
+    {
+        "id":"3",
+        "name":"Deneme"
+    }
+]
+
+}
