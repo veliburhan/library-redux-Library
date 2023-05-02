@@ -4,7 +4,7 @@
         "title":"Hayvan Çiftliği",
         "author":"George Orwell",        
         "isbn":"11112222333344445555",
-        "publiser":"Özgür Yayınları",
+        "publisher":"Özgür Yayınları",
         "categoryId":"1",
         "isRead":"false"
     },
@@ -13,7 +13,7 @@
         "title":"Şeker Portakalı",
         "author":"Jose Mauro de Vasconcelos",        
         "isbn":"22223333444455556666",
-        "publiser":"Can Yayınları",
+        "publisher":"Can Yayınları",
         "categoryId":"2",
         "isRead":"false"
     },
@@ -22,7 +22,7 @@
         "title":"Dedemin Bakkalı",
         "author":"Şermin Yaşar",        
         "isbn":"133334444555566667777",
-        "publiser":"Timaş Yayınları",
+        "publisher":"Timaş Yayınları",
         "categoryId":"3",
         "isRead":"false"
     }

@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import {useDispatch,useSelector} from "react-redux";
 import axios from "axios";
 import actionTypes from "./redux/action/actionTypes";
+import Error from "./pages/Error";
+import AddBook from "./pages/AddBook";
 
 
 
@@ -44,6 +46,10 @@ function App() {
    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/add-book" element={<AddBook/>} />
+
+
+      <Route path="*"element ={<Error/>}/>
     </Routes>
    </BrowserRouter>
   );

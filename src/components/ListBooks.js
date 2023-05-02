@@ -8,6 +8,10 @@ const ListBooks = () => {
 
     return (
         <div className="container my-3">
+            <div className="d-flex justify-content-end my-3">
+                <Link to={"/add-book"} className="btn btn-primary">Kitap Ekle</Link>
+            </div>
+
             <table className="table table-hover">
                 <thead>
                     <tr className="position-relative">
