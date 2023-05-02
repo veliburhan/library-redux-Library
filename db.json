@@ -1,46 +1,63 @@
-{"books":[
+{
+  "books": [
     {
-        "id":"1",
-        "title":"Hayvan Çiftliği",
-        "author":"George Orwell",        
-        "isbn":"11112222333344445555",
-        "publisher":"Özgür Yayınları",
-        "categoryId":"1",
-        "isRead":"false"
+      "id": "1683057740428",
+      "title": "Hayvan Çiftliği",
+      "author": "George Orwell",
+      "isbn": "11112222333344445555",
+      "publisher": "Özgür Yayınları",
+      "categoryId": "1",
+      "isRead": "false"
     },
     {
-        "id":"2",
-        "title":"Şeker Portakalı",
-        "author":"Jose Mauro de Vasconcelos",        
-        "isbn":"22223333444455556666",
-        "publisher":"Can Yayınları",
-        "categoryId":"2",
-        "isRead":"false"
+      "id": "1683077710428",
+      "title": "Şeker Portakalı",
+      "author": "Jose Mauro de Vasconcelos",
+      "isbn": "22223333444455556666",
+      "publisher": "Can Yayınları",
+      "categoryId": "2",
+      "isRead": "false"
     },
     {
-        "id":"3",
-        "title":"Dedemin Bakkalı",
-        "author":"Şermin Yaşar",        
-        "isbn":"133334444555566667777",
-        "publisher":"Timaş Yayınları",
-        "categoryId":"3",
-        "isRead":"false"
+      "id": "1683057710828",
+      "title": "Dedemin Bakkalı",
+      "author": "Şermin Yaşar",
+      "isbn": "133334444555566667777",
+      "publisher": "Timaş Yayınları",
+      "categoryId": "3",
+      "isRead": "false"
+    },
+    {
+      "id": "1683057710428",
+      "title": "Tembel Çocuğun Haylaz Treni",
+      "author": "Andry Flor",
+      "isbn": "54646546464",
+      "publisher": "Bilgi",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1683058879970",
+      "title": "Neden İnsanları Dış Görünüşüne Göre Yargılarız",
+      "author": "Edward Dutton",
+      "isbn": "97885824552",
+      "publisher": "Liberus",
+      "categoryId": "3",
+      "isRead": false
     }
-],
-
-"categories":[
+  ],
+  "categories": [
     {
-        "id":"1",
-        "name":"Roman"
+      "id": "1",
+      "name": "Roman"
     },
     {
-        "id":"2",
-        "name":"Hikaye"
+      "id": "2",
+      "name": "Hikaye"
     },
     {
-        "id":"3",
-        "name":"Deneme"
+      "id": "3",
+      "name": "Deneme"
     }
-]
-
+  ]
 }

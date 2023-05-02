@@ -23,7 +23,8 @@ const ListBooks = () => {
                 </thead>
                 <tbody>
                     {booksState.books.map((book,index)=> {
-                    const myCategory=categoriesState.categories.find(item=>item.id === book.id)
+                    const myCategory=categoriesState.categories.find(item=>item.id === book.categoryId)
+                    
                     return(
                         <tr key={book.id} className="position-relative">
                         <td>
