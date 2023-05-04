@@ -44,6 +44,42 @@
       "publisher": "Liberus",
       "categoryId": "3",
       "isRead": false
+    },
+    {
+      "id": "1683143119607",
+      "title": "İçimizdeki Şeytan",
+      "author": "Sabahattin Ali",
+      "isbn": "5454545454",
+      "publisher": "Everest",
+      "categoryId": "1",
+      "isRead": true
+    },
+    {
+      "id": "1683143249906",
+      "title": "Hayata Dair",
+      "author": "Mustafa Yıldırım",
+      "isbn": "45465465456",
+      "publisher": "Tibyan",
+      "categoryId": "3",
+      "isRead": false
+    },
+    {
+      "id": "1683145950126",
+      "title": "dsfdsfdsf",
+      "author": "dsfdsfdsf",
+      "isbn": "",
+      "publisher": "dsfdsf",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1683195505696",
+      "title": "ffdgfdg",
+      "author": "sfgfg",
+      "isbn": "",
+      "publisher": "sfgdsfg",
+      "categoryId": "1",
+      "isRead": false
     }
   ],
   "categories": [

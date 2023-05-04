@@ -5,6 +5,7 @@ import api from "../api/api"
 import urls from "../api/urls"
 import actionTypes from "../redux/action/actionTypes"
 import {useNavigate} from "react-router-dom"
+import GeneralModal from "./GeneralModal"
  
 const AddBookForm = () => {
     const dispatch=useDispatch()
@@ -20,6 +21,7 @@ const AddBookForm = () => {
         isRead:false
     });
 
+    const [showModal,setShowModal]=useState(false)
     const handleSubmit=(event)=>{
         event.preventDefault()
         /* VALİDATİON */if(!form.title || !form.author || !form.publisher || !form.categoryId){
@@ -29,7 +31,7 @@ const AddBookForm = () => {
         api.post(urls.books,form)
         .then(res=>{
             dispatch({type:actionTypes.bookTypes.ADD_BOOK,payload:form})
-            navigate("/")
+            setShowModal(true)
         })
         .catch(err=>{})
 
@@ -111,7 +113,17 @@ const AddBookForm = () => {
                     <button className="btn btn-secondary w-50" type="submit"> Kaydet</button>
                 </div>
             </form>
-        </div>
+            {
+                showModal === true &&
+                 <GeneralModal 
+                    title={"Başarılı"} 
+                    content="Kitap başarıyla kaydedildi" 
+                    buttonText={"Kapat"} 
+                    buttonOnClick={()=>navigate("/")}                    
+                />
+            }
+            
+         </div>
     )
 }
 

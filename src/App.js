@@ -6,6 +6,7 @@ import axios from "axios";
 import actionTypes from "./redux/action/actionTypes";
 import Error from "./pages/Error";
 import AddBook from "./pages/AddBook";
+import BookDetail from "./pages/BookDetail";
 
 
 
@@ -47,9 +48,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/add-book" element={<AddBook/>} />
-
-
-      <Route path="*"element ={<Error/>}/>
+      <Route path="/book-detail/:bookId" element={<BookDetail/>}/>
+      <Route path="*" element ={<Error/>}/>
     </Routes>
    </BrowserRouter>
   );
