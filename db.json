@@ -2,84 +2,75 @@
   "books": [
     {
       "id": "1683057740428",
-      "title": "Hayvan Çiftliği",
-      "author": "George Orwell",
+      "title": "Hayvan Çiftliği3",
+      "author": "George Orwell3",
       "isbn": "11112222333344445555",
-      "publisher": "Özgür Yayınları",
+      "publisher": "Özgür Yayınları4",
       "categoryId": "1",
       "isRead": "false"
     },
     {
-      "id": "1683077710428",
-      "title": "Şeker Portakalı",
-      "author": "Jose Mauro de Vasconcelos",
-      "isbn": "22223333444455556666",
-      "publisher": "Can Yayınları",
-      "categoryId": "2",
-      "isRead": "false"
-    },
-    {
-      "id": "1683057710828",
-      "title": "Dedemin Bakkalı",
-      "author": "Şermin Yaşar",
-      "isbn": "133334444555566667777",
-      "publisher": "Timaş Yayınları",
-      "categoryId": "3",
-      "isRead": "false"
-    },
-    {
-      "id": "1683057710428",
-      "title": "Tembel Çocuğun Haylaz Treni",
-      "author": "Andry Flor",
-      "isbn": "54646546464",
-      "publisher": "Bilgi",
-      "categoryId": "1",
-      "isRead": false
-    },
-    {
-      "id": "1683058879970",
-      "title": "Neden İnsanları Dış Görünüşüne Göre Yargılarız",
-      "author": "Edward Dutton",
-      "isbn": "97885824552",
-      "publisher": "Liberus",
-      "categoryId": "3",
-      "isRead": false
-    },
-    {
-      "id": "1683143119607",
-      "title": "İçimizdeki Şeytan",
-      "author": "Sabahattin Ali",
-      "isbn": "5454545454",
-      "publisher": "Everest",
+      "id": "1683296648318",
+      "title": "Dünyaya Düşen Adam",
+      "author": "Walter Tevis",
+      "isbn": "",
+      "publisher": "Kurgu Yayınevi",
       "categoryId": "1",
       "isRead": true
     },
     {
-      "id": "1683143249906",
-      "title": "Hayata Dair",
-      "author": "Mustafa Yıldırım",
-      "isbn": "45465465456",
-      "publisher": "Tibyan",
+      "id": "1683296755637",
+      "title": "İmkansızın Şarkısı",
+      "author": "Haruki Murakami",
+      "isbn": "",
+      "publisher": "Doğan Yayınevi",
+      "categoryId": "1",
+      "isRead": true
+    },
+    {
+      "id": "1683296843125",
+      "title": "Veronika Ölmek İstiyor 34",
+      "author": "Paulo Coelho 345hhhhhhhhh",
+      "isbn": "",
+      "publisher": "Örnek Yayınevi",
+      "categoryId": "3",
+      "isRead": true
+    },
+    {
+      "id": "1683296883045",
+      "title": "Böyle Söyledi Zerdüşt3",
+      "author": "Friedrich Nietzche4",
+      "isbn": "",
+      "publisher": "Doğan Yayınevi5",
       "categoryId": "3",
       "isRead": false
     },
     {
-      "id": "1683145950126",
-      "title": "dsfdsfdsf",
-      "author": "dsfdsfdsf",
+      "id": "1683296987933",
+      "title": "Babalar ve Oğullar",
+      "author": "İvan Sergeyeviç Turgenyev",
       "isbn": "",
-      "publisher": "dsfdsf",
+      "publisher": "Aydın Yayınevi",
       "categoryId": "1",
-      "isRead": false
+      "isRead": true
     },
     {
-      "id": "1683195505696",
-      "title": "ffdgfdg",
-      "author": "sfgfg",
+      "id": "1683297047468",
+      "title": "Zengin Baba Yoksul Baba",
+      "author": "Robert T. Kiyosaki",
       "isbn": "",
-      "publisher": "sfgdsfg",
-      "categoryId": "1",
-      "isRead": false
+      "publisher": "Finans Yayınevi",
+      "categoryId": "2",
+      "isRead": true
+    },
+    {
+      "id": "1683311772149",
+      "title": "Pamuk Prenses ve Yedi Cüceler 56",
+      "author": "NoName 56",
+      "isbn": "",
+      "publisher": "Bilinen Yayınevi 56",
+      "categoryId": "2",
+      "isRead": true
     }
   ],
   "categories": [

@@ -7,6 +7,7 @@ import actionTypes from "./redux/action/actionTypes";
 import Error from "./pages/Error";
 import AddBook from "./pages/AddBook";
 import BookDetail from "./pages/BookDetail";
+import BookEdit from "./pages/BookEdit";
 
 
 
@@ -49,6 +50,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/add-book" element={<AddBook/>} />
       <Route path="/book-detail/:bookId" element={<BookDetail/>}/>
+      <Route path="/book-edit/:bookId" element={<BookEdit/>}/>
       <Route path="*" element ={<Error/>}/>
     </Routes>
    </BrowserRouter>

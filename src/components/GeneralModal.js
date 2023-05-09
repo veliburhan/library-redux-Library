@@ -9,7 +9,7 @@ const GeneralModal = ({
         buttonOnClick,
         button2_OnClick= ()=>{}
     }) => {
-
+        
     return (
         <div 
         style={{ 
@@ -22,13 +22,11 @@ const GeneralModal = ({
             left:0,
             display:"flex",
             justifyContent:"center",
-            alignItems:"center"
-
-        
+            alignItems:"center"        
         }}>
             <div 
             style={{
-                width:"50%",
+                width:"30%",
                 backgroundColor:"#fff",
                 borderRadius:"5px",
                 padding:"20px"
@@ -38,7 +36,6 @@ const GeneralModal = ({
                 <div className="d-flex justify-content-center">
                     {
                         button2Text !=="" && (
-                            console.log(button2Text),
                             <button className="btn btn-primary" onClick={button2_OnClick}>{button2Text}</button>
                         )
                     }

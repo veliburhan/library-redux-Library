@@ -34,12 +34,10 @@ const AddBookForm = () => {
             setShowModal(true)
         })
         .catch(err=>{})
-
     }
 
-
     return (
-        <div className="container my-5">
+        <div className="container w-50 my-5">
             <form onSubmit={handleSubmit}> 
                 <div className="mb-3">
                     <label htmlFor="title"
@@ -110,7 +108,7 @@ const AddBookForm = () => {
                 </div>
 
                 <div className="d-flex justify-content-center">
-                    <button className="btn btn-secondary w-50" type="submit"> Kaydet</button>
+                    <button className="btn btn-success w-50" type="submit"> Kaydet</button>
                 </div>
             </form>
             {

@@ -2,15 +2,21 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import okundu from "../assets/images/okundu.png"
+import book from "../assets/images/book.png"
 
 const ListBooks = () => {
 
     const { booksState, categoriesState } = useSelector(state => state)
+    console.log("booksstate",booksState)
 
+    if(booksState.success === false || categoriesState.success === false){
+        return <h1>Loading...</h1>
+      }
+   
     return (
-        <div className="container my-3">
-            <div className="d-flex justify-content-end my-3">
-                <Link to={"/add-book"} className="btn btn-primary">Kitap Ekle</Link>
+        <div className="container">
+            <div className="d-flex justify-content-end">
+                <Link to={"/add-book"}><img width={"50px"} src={book} /></Link>
             </div>
 
             <table className="table table-hover">
@@ -26,6 +32,7 @@ const ListBooks = () => {
                 <tbody>
                     {booksState.books.map((book, index) => {
                         const myCategory = categoriesState.categories.find(item => item.id === book.categoryId)
+                        console.log("myCategory: ", myCategory)
 
                         return (
                             <tr key={book.id} className="position-relative">
