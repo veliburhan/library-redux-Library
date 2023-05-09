@@ -32,21 +32,17 @@ const BookEdit = () => {
         api.put(`${urls.books}/${params.bookId}`,form)
             .then(res=> {
                 dispatch({type:actionTypes.bookTypes.EDIT_BOOK,payload:form})
-                // navigate(`/book-detail/${params.bookId}`)
-                navigate("/")
-
+                navigate(`/book-detail/${params.bookId}`)
+               
             })
             .catch(err => {})
-
-
     }
 
-    if(myBook===null) return null
-
+    
     return (
         <div>
             <Header />
-            <div className="container w-50 my-5">
+            <div className="container w-50 my-5 border" >
             <form onSubmit={handleSubmit}> 
                 <div className="mb-3">
                     <label htmlFor="title"

@@ -3,16 +3,16 @@
     {
       "id": "1683057740428",
       "title": "Hayvan Çiftliği3",
-      "author": "George Orwell3",
+      "author": "George Orwell334",
       "isbn": "11112222333344445555",
-      "publisher": "Özgür Yayınları4",
+      "publisher": "Özgür Yayınları4333",
       "categoryId": "1",
       "isRead": "false"
     },
     {
       "id": "1683296648318",
-      "title": "Dünyaya Düşen Adam",
-      "author": "Walter Tevis",
+      "title": "Dünyaya Düşen Adam 4",
+      "author": "Walter Tevisjhgkjgkg",
       "isbn": "",
       "publisher": "Kurgu Yayınevi",
       "categoryId": "1",
@@ -32,18 +32,18 @@
       "title": "Veronika Ölmek İstiyor 34",
       "author": "Paulo Coelho 345hhhhhhhhh",
       "isbn": "",
-      "publisher": "Örnek Yayınevi",
+      "publisher": "Örnek Yayınevitttt",
       "categoryId": "3",
       "isRead": true
     },
     {
       "id": "1683296883045",
-      "title": "Böyle Söyledi Zerdüşt3",
-      "author": "Friedrich Nietzche4",
+      "title": "Böyle Söyledi24444",
+      "author": "Friedrich Nietzch24444",
       "isbn": "",
-      "publisher": "Doğan Yayınevi5",
-      "categoryId": "3",
-      "isRead": false
+      "publisher": "Doğan Yayınevi2444",
+      "categoryId": "1",
+      "isRead": true
     },
     {
       "id": "1683296987933",
@@ -65,12 +65,21 @@
     },
     {
       "id": "1683311772149",
-      "title": "Pamuk Prenses ve Yedi Cüceler 56",
-      "author": "NoName 56",
+      "title": "Pamuk Prenses ve Yedi Cüceler ",
+      "author": "NoName ",
       "isbn": "",
-      "publisher": "Bilinen Yayınevi 56",
+      "publisher": "Bilinen Yayınevi",
       "categoryId": "2",
       "isRead": true
+    },
+    {
+      "id": "1683623576178",
+      "title": "3dfdsfdasf",
+      "author": "3asdfadsf",
+      "isbn": "",
+      "publisher": "3adsfadsfadsf",
+      "categoryId": "1",
+      "isRead": false
     }
   ],
   "categories": [

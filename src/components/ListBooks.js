@@ -9,10 +9,7 @@ const ListBooks = () => {
     const { booksState, categoriesState } = useSelector(state => state)
     console.log("booksstate",booksState)
 
-    if(booksState.success === false || categoriesState.success === false){
-        return <h1>Loading...</h1>
-      }
-   
+    
     return (
         <div className="container">
             <div className="d-flex justify-content-end">

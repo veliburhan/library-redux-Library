@@ -48,12 +48,12 @@ const booksReducer = (state = intialState, action) => {
 
         case actionTypes.bookTypes.EDIT_BOOK:
             let tempArray=[];
-            for(let i=1;i<state.books.length;i++){
+            for(let i=0;i<state.books.length;i++){
                 if(state.books[i].id === action.payload.id){
                     tempArray.push(action.payload)
                 }
                 else{
-                    tempArray.push(state.books[i].id)
+                    tempArray.push(state.books[i])
                 }
             }
             return{
