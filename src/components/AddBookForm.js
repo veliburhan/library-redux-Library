@@ -24,7 +24,8 @@ const AddBookForm = () => {
     const [showModal,setShowModal]=useState(false)
     const handleSubmit=(event)=>{
         event.preventDefault()
-        /* VALİDATİON */if(!form.title || !form.author || !form.publisher || !form.categoryId){
+        /* VALİDATİON */
+        if(!form.title || !form.author || !form.publisher || !form.categoryId){
             alert("Kitap adı, Yazar adı, Yayınevi adı ve Kategori alanları doldurulmalıdır.")
             return
         }

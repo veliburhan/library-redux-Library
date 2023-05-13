@@ -13,6 +13,7 @@ import actionTypes from "../redux/action/actionTypes"
 import okundu from "../assets/images/okundu.png"
 import edit from "../assets/images/edit.png"
 import del from "../assets/images/del.png"
+import back from "../assets/images/back.png"
 
 
 const BookDetail = () => {
@@ -35,6 +36,8 @@ const BookDetail = () => {
                          
         })
     }
+
+    
 
     // const read=(id)=>{
     //     api.put(`${urls.books}/${params.bookId}`)
@@ -61,9 +64,9 @@ const BookDetail = () => {
     return (
         <div>
             <Header />
-            <div className="container my-5 justify-content-center">
-
-                <table className="table table-borderless mx-auto w-50">
+            <div className="container my-5 justify-content-center border">
+                <Link to={"/"}><button className="justify-content-end"><img src={back}/></button></Link>
+                <table className="table table-borderless mx-auto w-50 border">
 
                     <tbody>
 

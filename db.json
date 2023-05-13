@@ -2,10 +2,10 @@
   "books": [
     {
       "id": "1683057740428",
-      "title": "Hayvan Çiftliği3",
-      "author": "George Orwell334",
+      "title": "Hayvan Çiftliği",
+      "author": "George Orwell",
       "isbn": "11112222333344445555",
-      "publisher": "Özgür Yayınları4333",
+      "publisher": "Özgür Yayınları",
       "categoryId": "1",
       "isRead": "false"
     },
@@ -15,7 +15,7 @@
       "author": "Walter Tevisjhgkjgkg",
       "isbn": "",
       "publisher": "Kurgu Yayınevi",
-      "categoryId": "1",
+      "categoryId": "3",
       "isRead": true
     },
     {
@@ -29,19 +29,19 @@
     },
     {
       "id": "1683296843125",
-      "title": "Veronika Ölmek İstiyor 34",
-      "author": "Paulo Coelho 345hhhhhhhhh",
+      "title": "Veronika Ölmek İstiyor",
+      "author": "Paulo Coelho",
       "isbn": "",
-      "publisher": "Örnek Yayınevitttt",
+      "publisher": "Örnek Yayınevi",
       "categoryId": "3",
       "isRead": true
     },
     {
       "id": "1683296883045",
-      "title": "Böyle Söyledi24444",
-      "author": "Friedrich Nietzch24444",
+      "title": "Böyle Söyledi",
+      "author": "Friedrich Nietzch",
       "isbn": "",
-      "publisher": "Doğan Yayınevi2444",
+      "publisher": "Doğan Yayınevi",
       "categoryId": "1",
       "isRead": true
     },
@@ -73,11 +73,11 @@
       "isRead": true
     },
     {
-      "id": "1683623576178",
-      "title": "3dfdsfdasf",
-      "author": "3asdfadsf",
+      "id": "1683926460087",
+      "title": "La",
+      "author": "Nazan Bekiroğlu",
       "isbn": "",
-      "publisher": "3adsfadsfadsf",
+      "publisher": "Timaş",
       "categoryId": "1",
       "isRead": false
     }
@@ -94,6 +94,10 @@
     {
       "id": "3",
       "name": "Deneme"
+    },
+    {
+      "id": "1683982154553",
+      "name": "Tarih"
     }
   ]
 }

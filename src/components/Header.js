@@ -14,7 +14,7 @@ const Header=()=>{
       <ul className="navbar-nav">
         
         <li className="nav-item">
-          <Link className="nav-link active" aria-current="page" to={""}>Kategoriler</Link>
+          <Link className="nav-link active" aria-current="page" to={"/categories"}>Kategoriler</Link>
         </li>
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="#">Kitaplar</a>

@@ -42,7 +42,7 @@ const BookEdit = () => {
     return (
         <div>
             <Header />
-            <div className="container w-50 my-5 border" >
+            <div className="container w-50 my-5" >
             <form onSubmit={handleSubmit}> 
                 <div className="mb-3">
                     <label htmlFor="title"

@@ -8,6 +8,8 @@ import Error from "./pages/Error";
 import AddBook from "./pages/AddBook";
 import BookDetail from "./pages/BookDetail";
 import BookEdit from "./pages/BookEdit";
+import ListCategories from "./pages/ListCategories";
+import AddCategory from "./pages/AddCategory";
 
 
 
@@ -51,6 +53,8 @@ function App() {
       <Route path="/add-book" element={<AddBook/>} />
       <Route path="/book-detail/:bookId" element={<BookDetail/>}/>
       <Route path="/book-edit/:bookId" element={<BookEdit/>}/>
+      <Route path="/categories" element={<ListCategories/>} />
+      <Route path="/add-category" element={<AddCategory/>} />
       <Route path="*" element ={<Error/>}/>
     </Routes>
    </BrowserRouter>
