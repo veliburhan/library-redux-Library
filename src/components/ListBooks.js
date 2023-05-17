@@ -7,7 +7,7 @@ import book from "../assets/images/book.png"
 const ListBooks = () => {
 
     const { booksState, categoriesState } = useSelector(state => state)
-    console.log("booksstate",booksState)
+   
 
     
     return (
@@ -29,8 +29,7 @@ const ListBooks = () => {
                 <tbody>
                     {booksState.books.map((book, index) => {
                         const myCategory = categoriesState.categories.find(item => item.id === book.categoryId)
-                        console.log("myCategory: ", myCategory)
-
+                        
                         return (
                             <tr key={book.id} className="position-relative">
                                 <td>

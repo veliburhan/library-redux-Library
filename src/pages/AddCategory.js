@@ -33,7 +33,7 @@ const AddCategory = () => {
             return
         }
 
-        if(categoriesState.categories.filter(category => category.name === form.name).length > 0){
+        if(categoriesState.categories.filter(category => category.name.toLocaleLowerCase("tr-TR") === form.name.toLocaleLowerCase("tr-TR")).length > 0){
             alert("Bu Kategori adı daha önce eklenmiş. Yeni bir kategori adı ekleyin.")
             return
         }

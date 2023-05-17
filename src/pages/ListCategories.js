@@ -19,29 +19,30 @@ import edit from "../assets/images/edit.png"
 
 
 const ListCategories = () => {
-    const navigate=useNavigate();
-    const dispatch=useDispatch();
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
 
     const { categoriesState, booksState } = useSelector(state => state)
     const [showModal, setShowModal] = useState(false)
-    const [modalForm,setModalForm]=useState(false)
-    const [deleted,setDeleted]=useState(false)
-    const [WillDelCategory,SetWillDelCategory]=useState("")
-    const [indelible,setIndelible] = useState(false)
-    
-    const [categoryForm,setCategoryForm]=useState(
+    const [modalForm, setModalForm] = useState(false)
+    const [deleted, setDeleted] = useState(false)
+    const [WillDelCategory, SetWillDelCategory] = useState("")
+    const [indelible, setIndelible] = useState(false)
+    const [selectedRow, setSelectedRow] = useState("0")
+
+    const [categoryForm, setCategoryForm] = useState(
         {
-            id:"",
-            name:""
+            id: "",
+            name: ""
         }
     )
 
 
 
-    const deleteCategory=(id)=>{
+    const deleteCategory = (id) => {
         //VALİDATİON
-        if(booksState.books.filter(book => book.categoryId === id).length > 0 ){
+        if (booksState.books.filter(book => book.categoryId === id).length > 0) {
             // alert("Bu kategori ismi ile kayıtlı kitap olduğundan kategori ismi silinemez !")
             setIndelible(true)
             return
@@ -49,15 +50,21 @@ const ListCategories = () => {
 
 
         api.delete(`${urls.categories}/${id}`)
-        .then(res=>{
-            dispatch({type:actionTypes.categoryTypes.DELETE_CATEGORY, payload:id})
-            setShowModal(false)
-            setDeleted(true)    
-                         
-        })
-         }
+            .then(res => {
+                dispatch({ type: actionTypes.categoryTypes.DELETE_CATEGORY, payload: id })
+                setShowModal(false)
+                setDeleted(true)
 
-        
+            })
+    }
+
+    const categorySay = (categori) => {
+        const adet = booksState.books.filter(book => book.categoryId === categori.id).length
+        console.log("Kategorideki kitap sayısı:", adet)
+        return adet
+    }
+
+
 
 
     return (
@@ -66,7 +73,7 @@ const ListCategories = () => {
             <div>
 
 
-                <div className="container w-50 my-5">
+                <div className="container w-60 my-5">
                     <div className="d-flex justify-content-end">
                         <Link to={"/add-category"} className="btn btn-primary">Ekle</Link>
                     </div>
@@ -83,65 +90,84 @@ const ListCategories = () => {
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Sıra No</th>
-                                        <th scope="col">Kategori Adı</th>
-                                        <th scope="col">Kitap Sayısı</th>
-                                        <th scope="col">İşlemler</th>
+                                        <th style={{width:"40px"}} >Sıra No</th>
+                                        <th style={{width:"500px"}}>Kategori Adı</th>
+                                        <th style={{width:"400px"}}>Kitap Sayısı</th>
+                                        <th>İşlemler</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {
                                         categoriesState.categories.map((categori, index) =>
-                                            <tr key={categori.id}>
-                                                <th scope="row">{index + 1}</th>
-                                                <td>{categori.name}</td>
-                                                <td>
+                                            <>
+                                                <tr key={categori.id}>
+                                                    <th scope="row">{index + 1}</th>
+                                                    <td>{categori.name}</td>
+                                                    <td>
+                                                        {categorySay(categori)>0 ? <button className="btn btn-outline-info" onClick={() => selectedRow !== index ? setSelectedRow(index):setSelectedRow("0")}>{categorySay(categori)}</button>:categorySay(categori)}
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            className="" onClick={() => {
+                                                                setShowModal(true)
+                                                                SetWillDelCategory(categori.id)
+                                                            }}
+                                                            style={{ width: "40px" }}><img src={del} style={{ width: "30px" }} />
+                                                        </button>
 
-                                                    {booksState.books.filter(book => book.categoryId === categori.id).length}
-                                                </td>
-                                                <td>
-                                                    <button 
-                                                        className="" onClick={() => {
-                                                        setShowModal(true) 
-                                                        SetWillDelCategory(categori.id)
-                                                    }}
-                                                        style={{ width: "40px" }}><img src={del} style={{ width: "30px" }} />
-                                                    </button>
+                                                        <button
+                                                            className="mx-2" onClick={() => {
+                                                                setModalForm(true)
+                                                                setCategoryForm({ ...categoryForm, id: categori.id, name: categori.name })
 
-                                                    <button 
-                                                        className="mx-2" onClick={() => {
-                                                        setModalForm(true) 
-                                                        setCategoryForm({...categoryForm,id:categori.id,name:categori.name})
-                                                                                                      
+
+                                                            }}
+                                                            style={{ width: "40px" }}><img src={edit} style={{ width: "30px" }} />
+                                                        </button>
+
+                                                    </td>
+
+                                                </tr>
+                                                {selectedRow === index && categorySay(categori) > 0 && (
+
+                                                    booksState.books.filter(book => book.categoryId === categori.id).map((book,index) =>                                    
+                                                    
+                                                    <tr key={index}>
                                                         
-                                                    }}
-                                                        style={{ width: "40px" }}><img src={edit} style={{ width: "30px" }} />
-                                                    </button>
+                                                        <td className="text-end">{index+1}</td>
+                                                        <td >{book.title}</td>
+                                                        <td >{book.author}</td>
+                                                        <td>{categori.name}</td>
+                                                    </tr>
+                                                    
+                                                    )
+                                                     
 
-                                                </td>
-                                            </tr>
+                                                )}
 
 
+
+                                            </>
                                         )
                                     }
-
 
                                 </tbody>
                             </table>
                         )
-                                }
+                    }
                     {
                         showModal === true && (
-                            
-                            <GeneralModal 
-                            title={"UYARI !"} 
-                            content={"Bu Kategori silinecek. Devam etmek istiyor musunuz?"} 
-                            buttonText={"Sil"} 
-                            button2Text={"Vazgeç"} 
-                            button2_OnClick={() => setShowModal(false)} 
-                            buttonOnClick={()=>{deleteCategory(WillDelCategory)                                  
-                            }}/>                       
-                         )
+
+                            <GeneralModal
+                                title={"UYARI !"}
+                                content={"Bu Kategori silinecek. Devam etmek istiyor musunuz?"}
+                                buttonText={"Sil"}
+                                button2Text={"Vazgeç"}
+                                button2_OnClick={() => setShowModal(false)}
+                                buttonOnClick={() => {
+                                    deleteCategory(WillDelCategory)
+                                }} />
+                        )
                     }
 
                     {
@@ -177,11 +203,11 @@ const ListCategories = () => {
 
                         )
                     }
-                    
+
                     {
-                        
+
                         modalForm === true && (
-                            
+
                             <ModalForm
                                 title={"Kategori Güncelle"}
                                 content=""
@@ -190,18 +216,18 @@ const ListCategories = () => {
                                     navigate("/categories")
                                     setModalForm(false)
                                 }}
-                                ModalForm={()=>setModalForm(false)}
-                                                                
+                                ModalForm={() => setModalForm(false)}
+
                             />
 
                         )
                     }
 
-                                      
+
 
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }

@@ -4,6 +4,7 @@ import api from "../api/api"
 import urls from "../api/urls"
 import { useDispatch,useSelector } from "react-redux"
 import actionTypes from "../redux/action/actionTypes"
+import GeneralModal from "./GeneralModal"
 
 
 
@@ -18,6 +19,7 @@ const ModalForm = ({
 
     const [form, setForm] = useState(categoryForm)
     const { categoriesState } = useSelector(state => state)
+    const [hata,setHata]=useState(false)
 
     console.log("form name= ", form.name)
     console.log("form ıd= ", form.id)
@@ -30,7 +32,8 @@ const ModalForm = ({
         event.preventDefault()
         //VALİDATİON
         if(categoriesState.categories.filter(category => category.name === form.name).length > 0){
-            alert(" Mevcut kategorilerin dışında bir kategori adı yazınız !")
+            //alert(" Mevcut kategorilerin dışında bir kategori adı yazınız !")
+            setHata(true)
             return
         }
 
@@ -90,6 +93,26 @@ const ModalForm = ({
                         <button className="btn btn-primary" type="submit" >Kaydet</button>
                     </div>
                 </form>
+
+
+                {   
+                    hata === true && (
+                        
+                        <GeneralModal 
+                        title={"Uyarı"} 
+                        content={"Bu kategori adı şu anda kullanımda. Lütfen başka bir kategori adı yazınız."} 
+                        buttonText={"Tamam"}                         
+                        buttonOnClick={() => {
+                            navigate("/categories")
+                            setHata(false)
+                            }
+                            }                         
+                        />  
+                        
+                    )
+                }
+
+                
 
            
                 
