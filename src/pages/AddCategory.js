@@ -8,6 +8,8 @@ import actionTypes from "../redux/action/actionTypes";
 
 import GeneralModal from "../components/GeneralModal";
 
+import { upperFirstLetters } from "../utils/functions";
+
 
 
 
@@ -61,7 +63,7 @@ const AddCategory = () => {
                     <label htmlFor="categoryName" className="form-label">Kategori Adı<span style={{ color: "red" }}>*</span></label>
                     <input type="text" className="form-control" id="categoryName" placeholder="Kategori adı giriniz"
                     value={form.name}
-                    onChange={(event) => setForm({ ...form, name: event.target.value })}
+                    onChange={(event) => setForm({ ...form, name: upperFirstLetters(event.target.value) })}
                     />
                     
                 </div>

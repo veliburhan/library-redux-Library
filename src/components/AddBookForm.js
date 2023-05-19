@@ -6,6 +6,8 @@ import urls from "../api/urls"
 import actionTypes from "../redux/action/actionTypes"
 import {useNavigate} from "react-router-dom"
 import GeneralModal from "./GeneralModal"
+
+import { upperFirstLetters } from "../utils/functions"
  
 const AddBookForm = () => {
     const dispatch=useDispatch()
@@ -21,6 +23,8 @@ const AddBookForm = () => {
         isRead:false
     });
 
+    
+
     const [showModal,setShowModal]=useState(false)
     const handleSubmit=(event)=>{
         event.preventDefault()
@@ -29,6 +33,10 @@ const AddBookForm = () => {
             alert("Kitap adı, Yazar adı, Yayınevi adı ve Kategori alanları doldurulmalıdır.")
             return
         }
+        // Girilen verilerin baş harfi büyük harfe çevriliyor
+       
+
+
         api.post(urls.books,form)
         .then(res=>{
             dispatch({type:actionTypes.bookTypes.ADD_BOOK,payload:form})
@@ -49,7 +57,7 @@ const AddBookForm = () => {
                         id="title"
                         placeholder="Kitap adı giriniz" 
                         value={form.title}
-                        onChange={(event)=> setForm({...form,title:event.target.value})}
+                        onChange={(event)=> setForm({...form,title:upperFirstLetters(event.target.value)})}
                         />
                         
                 </div>
@@ -58,7 +66,7 @@ const AddBookForm = () => {
                     <label htmlFor="author" className="form-label">Yazar Adı <span style={{color:"red"}}>*</span></label>
                     <input type="text" className="form-control" id="author" placeholder="Yazar adı giriniz" 
                     value={form.author}
-                    onChange={(event)=> setForm({...form,author:event.target.value})}
+                    onChange={(event)=> setForm({...form,author:upperFirstLetters(event.target.value)})}
                     />
                 </div>
 
@@ -66,7 +74,7 @@ const AddBookForm = () => {
                     <label htmlFor="publisher" className="form-label">Yayınevi <span style={{color:"red"}}>*</span></label>
                     <input type="text" className="form-control" id="publisher" placeholder="Yayınevi adı giriniz" 
                     value={form.publisher}
-                    onChange={(event)=> setForm({...form,publisher:event.target.value})}
+                    onChange={(event)=> setForm({...form,publisher:upperFirstLetters(event.target.value)})}
                     />
                 </div>
 

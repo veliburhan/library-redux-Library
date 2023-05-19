@@ -10,6 +10,7 @@ import BookDetail from "./pages/BookDetail";
 import BookEdit from "./pages/BookEdit";
 import ListCategories from "./pages/ListCategories";
 import AddCategory from "./pages/AddCategory";
+import Authors from "./pages/Authors";
 
 
 
@@ -55,6 +56,7 @@ function App() {
       <Route path="/book-edit/:bookId" element={<BookEdit/>}/>
       <Route path="/categories" element={<ListCategories/>} />
       <Route path="/add-category" element={<AddCategory/>} />
+      <Route path="/authors" element={<Authors/>}/>
       <Route path="*" element ={<Error/>}/>
     </Routes>
    </BrowserRouter>

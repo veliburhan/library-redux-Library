@@ -8,6 +8,8 @@ import api from "../api/api"
 import urls from "../api/urls"
 import actionTypes from "../redux/action/actionTypes"
 
+import { upperFirstLetters } from "../utils/functions"
+
 
 
 
@@ -53,7 +55,7 @@ const BookEdit = () => {
                         id="title"
                         placeholder="Kitap adı giriniz"
                     value={form.title}
-                    onChange={(event)=> setForm({...form,title:event.target.value})}
+                    onChange={(event)=> setForm({...form,title:upperFirstLetters(event.target.value)})}
                     />
 
                 </div>
@@ -62,7 +64,7 @@ const BookEdit = () => {
                     <label htmlFor="author" className="form-label">Yazar Adı <span style={{ color: "red" }}>*</span></label>
                     <input type="text" className="form-control" id="author" placeholder="Yazar adı giriniz"
                     value={form.author}
-                    onChange={(event)=> setForm({...form,author:event.target.value})}
+                    onChange={(event)=> setForm({...form,author:upperFirstLetters(event.target.value)})}
                     />
                 </div>
 
@@ -70,7 +72,7 @@ const BookEdit = () => {
                     <label htmlFor="publisher" className="form-label">Yayınevi <span style={{ color: "red" }}>*</span></label>
                     <input type="text" className="form-control" id="publisher" placeholder="Yayınevi adı giriniz"
                     value={form.publisher}
-                    onChange={(event)=> setForm({...form,publisher:event.target.value})}
+                    onChange={(event)=> setForm({...form,publisher:upperFirstLetters(event.target.value)})}
                     />
                 </div>
 

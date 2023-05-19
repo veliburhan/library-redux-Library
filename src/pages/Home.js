@@ -7,7 +7,7 @@ const Home=()=>{
 
    return(
         <div>
-            <Header />
+            <Header page="list-books" />
             <ListBooks/>
         </div>
 

@@ -5,7 +5,7 @@ import urls from "../api/urls"
 import { useDispatch,useSelector } from "react-redux"
 import actionTypes from "../redux/action/actionTypes"
 import GeneralModal from "./GeneralModal"
-
+import { upperFirstLetters } from "../utils/functions"
 
 
 const ModalForm = ({
@@ -82,7 +82,7 @@ const ModalForm = ({
                             id="title"
                             placeholder="Kategori adı giriniz"
                             value={form.name}
-                            onChange={(event) => setForm({...form,name:event.target.value})}
+                            onChange={(event) => setForm({...form,name:upperFirstLetters(event.target.value)})}
                         />
 
                     </div>               

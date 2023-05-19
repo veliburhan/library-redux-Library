@@ -14,11 +14,12 @@ import okundu from "../assets/images/okundu.png"
 import edit from "../assets/images/edit.png"
 import del from "../assets/images/del.png"
 import back from "../assets/images/back.png"
-import booksBanner from "../assets/images/books_banner.png"
+import booksBanner from "../assets/images/books_banner2.png"
 
 
-const BookDetail = () => {
+const BookDetail = (props) => {
     const params = useParams()
+    console.log("props= ", props)
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -56,32 +57,29 @@ const BookDetail = () => {
                 api.get(`${urls.categories}/${resBook.data.categoryId}`) //kitabın categoryId sine bakarak kategori ismini buluyoruz.
                     .then(resCategory =>
                         setCategory(resCategory.data))
-                console.log("Başarılı")
+
 
             })
     }, [])
 
     // if(book===null) return null
     return (
-        <div>
-            <Header />
+        <div >
+            <Header page="book-detail" />
 
 
 
-            <div className="container my-5 justify-content-center border">
-                
+            <div className="container my-5 justify-content-center w-50 p-3 mb-2">
+
                 {/* CARD START  */}
 
-                <div className="card bg-dark text-white" style={{width:"60%"}}>
+                <div className="card w-100">
 
 
-                    <img src={booksBanner} className="card-img opacity-50"  alt="..." />
+                    <div className="card-img-overlay mx-auto">
 
 
-                    <div className="card-img-overlay w-50 mx-auto text-white">
-                        
-                        
-                        <table className="table mx-auto card-title text-white" style={{fontSize:"20px" }}>
+                        <table className="table mx-auto card-title text-black" style={{ fontSize: "20px" }}>
 
                             <tbody>
 
@@ -121,8 +119,8 @@ const BookDetail = () => {
                                 <tr>
                                     <td style={{ width: "100px" }}></td>
                                     <td style={{ width: "300px" }}>
-                                        <Link to={`/book-edit/${book?.id}`} className="btn btn-success my-10 justify-content-end" style={{ width: "80px" }}><img src={edit} /></Link>
-                                        <button className="btn btn-danger my-10 justify-content-end mx-1" onClick={() => setShowModal(true)} style={{ width: "80px" }}><img src={del} /></button>
+                                        <Link to={`/book-edit/${book?.id}`} className="btn btn-success my-10 justify-content-end">Düzenle</Link>
+                                        <button className="btn btn-danger my-10 justify-content-end mx-1" onClick={() => setShowModal(true)} style={{ width: "90px" }}>Sil</button>
 
                                     </td>
                                 </tr>

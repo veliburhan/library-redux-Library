@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import okundu from "../assets/images/okundu.png"
 import book from "../assets/images/book.png"
+import { upperFirstLetters } from "../utils/functions"
 
 const ListBooks = () => {
 
@@ -11,11 +12,8 @@ const ListBooks = () => {
 
     
     return (
-        <div className="container">
-            <div className="d-flex justify-content-end">
-                <Link to={"/add-book"}><img width={"50px"} src={book} /></Link>
-            </div>
-
+        <div className="container my-4">
+           
             <table className="table table-hover">
                 <thead>
                     <tr className="position-relative">
@@ -35,7 +33,7 @@ const ListBooks = () => {
                                 <td>
                                     <Link className="link stretched-link" to={`/book-detail/${book.id}`}> {index + 1}</Link>
                                 </td>
-                                <td>{book.title}</td>
+                                <td>{upperFirstLetters(book.title)}</td>
                                 <td>{book.author}</td>
                                 <td>{myCategory.name}</td>
                                 <td>{book.isRead === true && <img style={{ width: "20px" }} src={okundu} alt={"Okundu"}/>} </td>

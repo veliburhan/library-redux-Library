@@ -60,7 +60,7 @@ const ListCategories = () => {
 
     const categorySay = (categori) => {
         const adet = booksState.books.filter(book => book.categoryId === categori.id).length
-        console.log("Kategorideki kitap sayısı:", adet)
+     
         return adet
     }
 
@@ -69,14 +69,12 @@ const ListCategories = () => {
 
     return (
         <div>
-            <Header />
+            <Header page="list-categories" />
             <div>
 
 
-                <div className="container w-60 my-5">
-                    <div className="d-flex justify-content-end">
-                        <Link to={"/add-category"} className="btn btn-primary">Ekle</Link>
-                    </div>
+                <div className="container w-60 my-2">
+                 
                     {
                         categoriesState.categories.length === 0 && (
                             <div className="alert alert-danger text-center" role="alert">
@@ -90,7 +88,7 @@ const ListCategories = () => {
                             <table className="table">
                                 <thead>
                                     <tr>
-                                        <th style={{width:"40px"}} >Sıra No</th>
+                                        <th style={{width:"60px"}} >S. No</th>
                                         <th style={{width:"500px"}}>Kategori Adı</th>
                                         <th style={{width:"400px"}}>Kitap Sayısı</th>
                                         <th>İşlemler</th>
@@ -129,24 +127,21 @@ const ListCategories = () => {
 
                                                 </tr>
                                                 {selectedRow === index && categorySay(categori) > 0 && (
-
-                                                    booksState.books.filter(book => book.categoryId === categori.id).map((book,index) =>                                    
                                                     
-                                                    <tr key={index}>
+
+                                                    booksState.books.filter(book => book.categoryId === categori.id).map((book_selected,index) =>                                    
+                                                    
+                                                    <tr key={index} className="position-relative">
                                                         
-                                                        <td className="text-end">{index+1}</td>
-                                                        <td >{book.title}</td>
-                                                        <td >{book.author}</td>
+                                                        <td className="text-end"><Link className="link stretched-link" to={`/book-detail/${book_selected.id}`}>{index+1}</Link></td>
+                                                        <td >{book_selected.title}</td>
+                                                        <td >{book_selected.author}</td>
                                                         <td>{categori.name}</td>
                                                     </tr>
                                                     
-                                                    )
-                                                     
+                                                    )                                                  
 
                                                 )}
-
-
-
                                             </>
                                         )
                                     }
@@ -175,7 +170,7 @@ const ListCategories = () => {
 
                             <GeneralModal
                                 title={"Bilgi"}
-                                content={"Kategori veri tabanından silindi. Kategori listesine yönlendirileceksiniz."}
+                                content={"Kategori veri tabanından silindi."}
                                 buttonText={"Tamam"}
                                 buttonOnClick={() => {
                                     navigate("/categories")

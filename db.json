@@ -11,8 +11,8 @@
     },
     {
       "id": "1683296648318",
-      "title": "Dünyaya Düşen Adam 4",
-      "author": "Walter Tevisjhgkjgkg",
+      "title": "Dünyaya Düşen Adam",
+      "author": "Walter Tevis",
       "isbn": "",
       "publisher": "Kurgu Yayınevi",
       "categoryId": "3",
@@ -38,12 +38,12 @@
     },
     {
       "id": "1683296883045",
-      "title": "Böyle Söyledi",
+      "title": "Böyle Söyledi Zerdüş",
       "author": "Friedrich Nietzch",
       "isbn": "",
       "publisher": "Doğan Yayınevi",
-      "categoryId": "1",
-      "isRead": true
+      "categoryId": "3",
+      "isRead": false
     },
     {
       "id": "1683296987933",
@@ -52,7 +52,7 @@
       "isbn": "",
       "publisher": "Aydın Yayınevi",
       "categoryId": "1",
-      "isRead": true
+      "isRead": false
     },
     {
       "id": "1683297047468",
@@ -80,6 +80,42 @@
       "publisher": "Timaş",
       "categoryId": "1",
       "isRead": false
+    },
+    {
+      "id": "1684346862726",
+      "title": "Bilim İnsanı",
+      "author": "Çayan Özvaran",
+      "isbn": "",
+      "publisher": "Model Çocuk",
+      "categoryId": "2",
+      "isRead": false
+    },
+    {
+      "id": "1684399512239",
+      "title": "Merhaba Ben",
+      "author": "Selim Yavuz",
+      "isbn": "",
+      "publisher": "Padişah",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1684415956300",
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn": "",
+      "publisher": "Yapı Kredi",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1684417643815",
+      "title": "Zengin Babanın Anlattıkları",
+      "author": "Robert T. Kiyosaki",
+      "isbn": "",
+      "publisher": "Zengin",
+      "categoryId": "2",
+      "isRead": false
     }
   ],
   "categories": [
@@ -96,12 +132,12 @@
       "name": "Deneme"
     },
     {
-      "id": "1683982154553",
-      "name": "Bilgisayar"
+      "id": "1684346559411",
+      "name": "Tasavvuf"
     },
     {
-      "id": "1684346256942",
-      "name": "Biyografi"
+      "id": "1684346616807",
+      "name": "Hukuk"
     }
   ]
 }
