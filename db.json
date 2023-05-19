@@ -88,7 +88,7 @@
       "isbn": "",
       "publisher": "Model Çocuk",
       "categoryId": "1684479565006",
-      "isRead": false
+      "isRead": true
     },
     {
       "id": "1684399512239",
@@ -106,7 +106,7 @@
       "isbn": "",
       "publisher": "Yapı Kredi",
       "categoryId": "1",
-      "isRead": false
+      "isRead": true
     },
     {
       "id": "1684417643815",

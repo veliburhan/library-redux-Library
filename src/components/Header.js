@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import book from "../assets/images/book.png"
+
 
 
 const Header = (props) => {

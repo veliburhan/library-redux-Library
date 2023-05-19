@@ -10,11 +10,8 @@ import urls from "../api/urls"
 import api from "../api/api"
 import GeneralModal from "../components/GeneralModal"
 import actionTypes from "../redux/action/actionTypes"
-import okundu from "../assets/images/okundu.png"
-import edit from "../assets/images/edit.png"
-import del from "../assets/images/del.png"
-import back from "../assets/images/back.png"
-import booksBanner from "../assets/images/books_banner2.png"
+
+
 
 
 const BookDetail = (props) => {
