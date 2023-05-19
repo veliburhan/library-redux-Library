@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import okundu from "../assets/images/okundu.png"
-import book from "../assets/images/book.png"
+
 import { upperFirstLetters } from "../utils/functions"
 
 const ListBooks = () => {
@@ -14,6 +14,14 @@ const ListBooks = () => {
      
         return adet
     }
+
+    
+
+    //alfabetik sıralama  ( Türkçe karaktere duyarlı obje verisi tutan dizinin sıralanması)
+     const Siralama=(liste)=>{ 
+       
+        return [...liste].sort(function(a, b){return a.title.localeCompare(b.title)})
+        }
    
 
     
@@ -31,7 +39,7 @@ const ListBooks = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {booksState.books.map((book, index) => {
+                    {Siralama(booksState.books).map((book, index) => {
                         const myCategory = categoriesState.categories.find(item => item.id === book.categoryId)
                         
                         return (
@@ -45,8 +53,7 @@ const ListBooks = () => {
                                 <td>{book.isRead === true && <img style={{ width: "20px" }} src={okundu} alt={"Okundu"}/>} </td>
                             </tr>)
 
-                    }
-                    )
+                                                            })
                     }
                    
                 </tbody> 
