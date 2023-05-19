@@ -18,21 +18,22 @@ const ModalForm = ({
 }) => {
 
     const [form, setForm] = useState(categoryForm)
+    const [categoryName,setCategoryName]=useState(categoryForm.name)
     const { categoriesState } = useSelector(state => state)
     const [hata,setHata]=useState(false)
 
-    console.log("form name= ", form.name)
-    console.log("form ıd= ", form.id)
+    
 
     const navigate=useNavigate()
     const dispatch=useDispatch()
-
+    
 
     const handleSubmit=(event)=>{
         event.preventDefault()
+        console.log("categoryName !==form.name:",categoryName !==form.name)
         //VALİDATİON
-        if(categoriesState.categories.filter(category => category.name === form.name).length > 0){
-            //alert(" Mevcut kategorilerin dışında bir kategori adı yazınız !")
+        if(categoriesState.categories.filter(category => category.name === form.name).length > 0 && categoryName !==form.name){
+            
             setHata(true)
             return
         }

@@ -4,7 +4,7 @@ import book from "../assets/images/book.png"
 
 
 const Header = (props) => {
-  console.log("header props=",props)
+  
   return (
     <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#e3f2fd" }}>
       <div className="container-fluid">

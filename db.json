@@ -87,7 +87,7 @@
       "author": "Çayan Özvaran",
       "isbn": "",
       "publisher": "Model Çocuk",
-      "categoryId": "2",
+      "categoryId": "1684479565006",
       "isRead": false
     },
     {
@@ -116,6 +116,78 @@
       "publisher": "Zengin",
       "categoryId": "2",
       "isRead": false
+    },
+    {
+      "id": "1684437379310",
+      "title": "Katalonya'ya Selam",
+      "author": "George Orwell",
+      "isbn": "",
+      "publisher": "Bgst Yayınları",
+      "categoryId": "2",
+      "isRead": false
+    },
+    {
+      "id": "1684437519397",
+      "title": "Burma Günleri",
+      "author": "George Orwell",
+      "isbn": "",
+      "publisher": "Can Yayınları",
+      "categoryId": "1",
+      "isRead": false
+    },
+    {
+      "id": "1684437708817",
+      "title": "İçimizdeki Şeytan",
+      "author": "Sabahattin Ali",
+      "isbn": "",
+      "publisher": "Everes",
+      "categoryId": "1",
+      "isRead": true
+    },
+    {
+      "id": "1684437849800",
+      "title": "Çılgın Dedemin Zaman Makinesi",
+      "author": "Sara Gürbüz Özeren",
+      "isbn": "",
+      "publisher": "Damla Yayınevi",
+      "categoryId": "1684479565006",
+      "isRead": true
+    },
+    {
+      "id": "1684479155031",
+      "title": "Hukuk Felsefesi",
+      "author": "Adnan Güriz",
+      "isbn": "",
+      "publisher": "Siyasal Kitabevi",
+      "categoryId": "1684346616807",
+      "isRead": false
+    },
+    {
+      "id": "1684479260824",
+      "title": "Değerlerin Tiranlığı",
+      "author": "Carl Schmitt",
+      "isbn": "",
+      "publisher": "Pinhan Yayıncılık",
+      "categoryId": "1684346616807",
+      "isRead": false
+    },
+    {
+      "id": "1684479433821",
+      "title": "İnsanın Anlam Arayışı",
+      "author": "Viktor Emil Frankl",
+      "isbn": "",
+      "publisher": "Okyanus",
+      "categoryId": "1684346559411",
+      "isRead": false
+    },
+    {
+      "id": "1684479510750",
+      "title": "Hayatın Anlamı Ve Psikoterapi",
+      "author": "Viktor Emil Frankl",
+      "isbn": "",
+      "publisher": "Say Yayınları",
+      "categoryId": "1684346559411",
+      "isRead": false
     }
   ],
   "categories": [
@@ -133,11 +205,15 @@
     },
     {
       "id": "1684346559411",
-      "name": "Tasavvuf"
+      "name": "Felsefe"
     },
     {
       "id": "1684346616807",
       "name": "Hukuk"
+    },
+    {
+      "id": "1684479565006",
+      "name": "Çocuk"
     }
   ]
 }

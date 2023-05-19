@@ -8,6 +8,12 @@ import { upperFirstLetters } from "../utils/functions"
 const ListBooks = () => {
 
     const { booksState, categoriesState } = useSelector(state => state)
+
+    const ReadBooks = () => {
+        const adet = booksState.books.filter(book => book.isRead === true).length
+     
+        return adet
+    }
    
 
     
@@ -42,8 +48,12 @@ const ListBooks = () => {
                     }
                     )
                     }
-                </tbody>
-            </table>
+                   
+                </tbody> 
+            </table> 
+            <div className="my-2"><h5 className="text-center">{`Toplam Kitap Sayısı: ${booksState.books.length}`}</h5></div>
+            <div className=""><h5 className="text-center">{`Okunan Kitap Sayısı: ${ReadBooks()}`}<span style={{fontSize:"18px"}}>{`     (%${Math.round(ReadBooks()/booksState.books.length*100)})`}</span></h5></div>
+           
         </div>
     )
 
