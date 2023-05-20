@@ -11,11 +11,4 @@
   <li>Kitap sayılarına tıklandığında ilgili kitaplar açılır table ile gösterilir ve tıklamak suretiyle kitap ayrıntı sayfasına geçilir.</li>
   <li>Yazarlar sayfasında mevcut kitapların yazarları gösterilir ve üzerine tıklandığında o yazara ait kitaplar açılır table ile gösterilir. </li>
   <li>Toplam kitap sayısı, okunan kitap sayısı ve okunan kitap oranı kitap listesinde gösterilir.</li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-
 </ul>
