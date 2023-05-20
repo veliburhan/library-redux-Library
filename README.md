@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+Kütüphane Projesi
+![github](https://github.com/veliburhan/library-redux-Library/blob/master/src/assets/images/gif1.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
